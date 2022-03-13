@@ -1,0 +1,59 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewBag.Calc = 20 / 5;
+}
+
+@model ProjectsViewModel
+
+
+
+@foreach (Project p in Model.Projects)
+{
+
+    <partial name="ProjectSummary" model="p" />
+
+@*<div class="card card-outline-primary m-1 p-1">
+    <div class="bg-light p-1">
+        <h4>@p.ProjectName</h4>
+
+        <span class="badge bg-info" style="float:right">
+            Impact: @p.ProjectImpact Served
+        </span>
+    </div>
+
+    <ul>
+        <li>Project Type: @p.ProjectType</li>
+        <li>Regional Program: @p.ProjectImpact</li>
+        <li>Project Phase: @p.ProjectPhase</li>
+        <li>Project Status: @p.ProjectFunctionalityStatus</li>
+    </ul>
+
+    <form method="post" asp-page="/Donate">
+        <input type="hidden" asp-for="@p.ProjectId" />
+        <input type="hidden" name="returnURL" value="@ViewContext.HttpContext.Request.PathAndQuery()" />
+        <span class="card-text">
+            <button type="submit" class="btn btn-success btn-sm float-end">Donate</button>
+        </span>
+    </form>
+</div>*@
+
+    
+        <br />
+
+
+}
+
+<div 
+     page-blah="@Model.PageInfo" 
+     page-action="Index" 
+     page-class="btn" 
+     page-class-normal="btn-outline-dark" 
+     page-class-selected="btn-primary" 
+     page-classes-enabled="true" 
+
+     class="btn-group pull-right m-1">
+
+</div>
+
